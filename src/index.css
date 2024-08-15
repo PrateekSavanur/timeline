@@ -1,0 +1,140 @@
+.timeline-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.timeline-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.timeline-wrapper {
+  position: relative;
+  overflow-x: auto;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 50vh;
+}
+
+.timeline-item {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  margin: 0 20px;
+  vertical-align: top;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  transform: translateY(-120%);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  transform: translateY(120%);
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100px;
+    margin: 0 10px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+  }
+
+  .timeline-content p {
+    font-size: 12px;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    transform: translateY(-120%);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    width: 80px;
+    margin: 0 5px;
+  }
+
+  .timeline-content h3 {
+    font-size: 14px;
+  }
+
+  .timeline-content p {
+    font-size: 10px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    transform: translateY(-120%);
+  }
+}
